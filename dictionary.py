@@ -35,3 +35,20 @@ class Solution:
                 return idx     
         return -1        
         
+  ###################### Code 4 ############
+
+class Solution:
+     def majorityElement(self, nums: List[int]) -> int:
+        def get_key(val):
+            for key, value in dict1.items():
+                if val == value:
+                     return key
+   
+        dict1={}
+        for i in nums:
+            if i not in dict1:
+                dict1[i]=1
+            else:
+                dict1[i]+=1
+        maxi=max(dict1.values())
+        return get_key(maxi)
