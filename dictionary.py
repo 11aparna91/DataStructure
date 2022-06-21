@@ -52,3 +52,7 @@ class Solution:
                 dict1[i]+=1
         maxi=max(dict1.values())
         return get_key(maxi)
+    
+    ######### Code 5 ##########
+    len(dict1)   #length of the dictionary
+    
