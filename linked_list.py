@@ -14,3 +14,12 @@ class Solution:
         else:
             l2.next=self.mergeTwoLists(l1,l2.next)
             return 
+#####################################
+
+class Solution:
+    def middleNode(self, head):
+        slow = fast = head
+        while fast and fast.next:
+            slow = slow.next
+            fast = fast.next.next
+        return slow
