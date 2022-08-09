@@ -53,6 +53,16 @@ class Solution:
         maxi=max(dict1.values())
         return get_key(maxi)
     
-    ######### Code 5 ##########
+    ######### Code 5 ####################
     len(dict1)   #length of the dictionary
+    
+    ############### Longest Pallindrome ########
+    class Solution:
+    def longestPalindrome(self, s: str) -> int:
+        ans=0
+        for v in collections.Counter(s).values():
+            ans = ans + (v//2) *2
+            if v%2==1 and ans%2==0:
+                ans += 1
+        return ans
     
